@@ -98,6 +98,18 @@ class arduino:
 		else:
 			print "Error: Could not open specified port"
 			return False
+	def ar(self,pin):
+		if(pin > 5 or pin < 0 or type(pin).__name__ != "int"):
+			print "Error: Incorrect pin value"
+			return False
+		ar_cw_1 = cw << 6 | pin
+		if self.ser.isOpen():
+			self.ser.write(chr(ar_cw_1))
+			senseval = int(self.ser.readline())
+			return senseval
+		else:
+			print "Error: Could not open specified port"
+			return False
 		        
 	    
 

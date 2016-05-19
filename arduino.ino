@@ -55,6 +55,7 @@ void darw(int cw){
   }
   else
   {
+    if( cw & 16){
    int pin =(int) cw & 15;
    delay(2);
    if(Serial.available()){
@@ -63,7 +64,13 @@ void darw(int cw){
      analogWrite(pin,val);
      Serial.print(pin);
      Serial.print(val);  
-    
+   }
+  }
+  else
+  {
+    senswal = analogRead(cw & 15);
+    Serial.println(senswal, DEC);
+  }
   }
 }
 

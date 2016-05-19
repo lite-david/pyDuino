@@ -1,0 +1,11 @@
+#Title: This is a Test designed to test workings of aw#
+#Pranaydeep Singh#
+#E-mail: theeviltwin@protonmail.com#
+#Code for ar last changed: 18th May 2016#
+
+The ar function works as the analogRead function does. It takes one argument which is the pin no between 0 and 5.
+It returns an output between 0 for ground and 1023 for 5V.
+A circuit was designed to test the workings of ar. An Arduino Uno was used to test the function
+Circuit Description: A simple DC motor is attached to A0 and Ground and an LED is attached to Pin 3.
+The circuit works in a simple way. The faster you rotate the motor in one direction the brighter the LED glows.
+The python code for the above is provided as ar_test.py.
